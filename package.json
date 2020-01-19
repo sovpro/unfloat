@@ -1,0 +1,31 @@
+{
+  "name": "@sovpro/unfloat",
+  "version": "1.0.0",
+  "description": "Unfloat a floating value to an integer number",
+  "main": "unfloat.js",
+  "scripts": {
+    "test": "istanbul cover test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sovpro/unfloat.git"
+  },
+  "keywords": [
+    "unfloat",
+    "convert",
+    "floating",
+    "number",
+    "integer"
+  ],
+  "author": "sovpro <its.so@outlook.com>",
+  "license": "MIT",
+  "engines": {
+    "node": ">=4.0.0"
+  },
+  "devDependencies": {
+    "istanbul": "^0.4.5"
+  },
+  "dependencies": {
+    "@sovpro/get-digit": "^1.0.0"
+  }
+}
