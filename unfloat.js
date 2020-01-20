@@ -15,7 +15,7 @@ function unfloat (val) {
     num = val * Math.pow (10, ++i)
   } while (num % 10) ; 
   if (intval > 0) {
-    intval_len = Math.ceil (Math.log10 (intval))
+    intval_len = Math.ceil (Math.log10 (intval)) + 1
   }
   while (intval_len) {
     let w = Math.pow (10, intval_len + i - 1) *

@@ -57,3 +57,14 @@ assertWithInfo (
   , 'The result of unfloating null should be undefined'
 )
 
+assertWithInfo (
+    unfloat (10.0009)
+  , 9
+  , 'The result of unfloating 10.0009 should be 9'
+)
+
+assertWithInfo (
+    unfloat (0.10309027)
+  , 10309027
+  , 'The result of unfloating 0.10309027 should be 10309027'
+)
