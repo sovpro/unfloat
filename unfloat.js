@@ -13,15 +13,16 @@ function unfloat (val) {
   let intval_len = 0
   do {
     num = val * Math.pow (10, ++i)
-  } while (num % 10) ; 
-  if (intval > 0) {
-    intval_len = Math.ceil (Math.log10 (intval)) + 1
+  } while (num % 10 > 0)
+  if (intval >= 1) {
+    intval_len = Math.ceil (Math.log10 (num))
+    while (Math.ceil (Math.log10 (num)) > i) {
+      num -= Math.pow (10, intval_len)
+           * getDigit (1 + intval_len--, num)
+    }
   }
-  while (intval_len) {
-    let w = Math.pow (10, intval_len + i - 1) *
-            getDigit (intval_len + i, num)
-    num -= w
-    intval_len--
+  while (getDigit (1, num) === 0) {
+    num /= 10
   }
-  return num / 10
+  return num
 }

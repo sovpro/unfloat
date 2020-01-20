@@ -1,6 +1,6 @@
 {
   "name": "@sovpro/unfloat",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Unfloat a floating value to an integer number",
   "main": "unfloat.js",
   "scripts": {
