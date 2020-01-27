@@ -8,3 +8,10 @@ Unfloat a floating value to an integer number.
 let unfloated_val = unfloat (1.123456789)
 // unfloated_val will be: 123456789
 ```
+
+## Preserve integer digits
+
+```js
+let unfloated_val = unfloat (1.123456789, true)
+// unfloated_val will be: 1123456789
+```

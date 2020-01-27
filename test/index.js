@@ -68,3 +68,15 @@ assertWithInfo (
   , 10309027
   , 'The result of unfloating 0.10309027 should be 10309027'
 )
+
+assertWithInfo (
+    unfloat (123.456, true)
+  , 123456
+  , 'The result of unfloating 123.456, preserving integer digits, should be 123456'
+)
+
+assertWithInfo (
+    unfloat (10.0009)
+  , 9
+  , 'The result of unfloating 10.0009, preserving integer digits, should be 100009'
+)

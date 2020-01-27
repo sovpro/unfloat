@@ -3,7 +3,7 @@ const getDigit = require ('@sovpro/get-digit')
 
 module.exports = unfloat
 
-function unfloat (val) {
+function unfloat (val, preserve) {
   if (val === null) return
   const intval = Math.trunc (Math.abs (val))
   if (isNaN (intval) || intval === Infinity) return
@@ -14,7 +14,7 @@ function unfloat (val) {
   do {
     num = val * Math.pow (10, ++i)
   } while (num % 10 > 0)
-  if (intval >= 1) {
+  if (intval >= 1 && (!!preserve === false)) {
     intval_len = Math.ceil (Math.log10 (num))
     while (Math.ceil (Math.log10 (num)) > i) {
       num -= Math.pow (10, intval_len)
